@@ -57,9 +57,12 @@ export function Footer() {
               className="h-3 opacity-40"
             />
             <span className="text-white/20 text-xs">|</span>
-            <span className="text-white/30 text-xs">
-              Prepared by BroadBrand
-            </span>
+            <span className="text-white/30 text-xs">Prepared by</span>
+            <img
+              src="/Broadbrand logo.png"
+              alt="BroadBrand"
+              className="h-4 brightness-0 invert opacity-40"
+            />
           </div>
           <p className="text-white/20 text-[11px] text-center md:text-right max-w-lg leading-relaxed">
             Platform policies and national regulations change frequently. Always

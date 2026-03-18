@@ -69,9 +69,14 @@ export function Navigation() {
           ))}
         </div>
 
-        {/* Prepared by */}
-        <div className="hidden lg:block text-[11px] tracking-[0.15em] uppercase text-white/30">
-          By BroadBrand
+        {/* Prepared by BroadBrand */}
+        <div className="hidden lg:flex items-center gap-2">
+          <span className="text-[11px] tracking-[0.15em] uppercase text-white/30">By</span>
+          <img
+            src="/Broadbrand logo.png"
+            alt="BroadBrand"
+            className="h-4 brightness-0 invert opacity-30"
+          />
         </div>
 
         {/* Mobile toggle */}
