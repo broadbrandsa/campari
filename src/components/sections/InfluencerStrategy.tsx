@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function InfluencerStrategy() {
   return (
@@ -9,23 +10,26 @@ export function InfluencerStrategy() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-dark/30 to-transparent" />
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
-            05
-          </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
-        </div>
+        <ScrollReveal>
+          {/* Section label */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
+              05
+            </span>
+            <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
+          </div>
 
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-          Influencer Strategy & IndaHash
-        </h2>
-        <p className="text-white/45 text-lg max-w-3xl leading-relaxed mb-16">
-          Non-negotiable baseline requirements, market-by-market viability, and
-          platform assessment for influencer activation across Africa.
-        </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            Influencer Strategy & IndaHash
+          </h2>
+          <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-16">
+            Non-negotiable baseline requirements, market-by-market viability, and
+            platform assessment for influencer activation across Africa.
+          </p>
+        </ScrollReveal>
 
         {/* Baseline requirements */}
+        <ScrollReveal delay={0.1}>
         <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-8 md:p-10 mb-16">
           <h3 className="text-[11px] tracking-[0.2em] uppercase text-green font-medium mb-8">
             Campari Group Non-Negotiable Baseline — All Markets
@@ -41,13 +45,15 @@ export function InfluencerStrategy() {
             ].map((req) => (
               <div key={req.label} className="p-5 rounded-lg border border-white/[0.06] bg-navy/50">
                 <span className="block text-green text-xs font-medium tracking-wide uppercase mb-2">{req.label}</span>
-                <p className="text-white/50 text-sm leading-relaxed">{req.value}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{req.value}</p>
               </div>
             ))}
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Market viability */}
+        <ScrollReveal delay={0.1}>
         <h3 className="font-display text-2xl font-semibold text-white mb-8">
           Market-by-Market Viability
         </h3>
@@ -83,17 +89,19 @@ export function InfluencerStrategy() {
                 <Badge className={`${m.statusColor} text-[10px]`}>{m.status}</Badge>
                 <span className="font-display text-xl font-semibold text-white">{m.market}</span>
               </div>
-              <p className="text-white/45 text-sm leading-relaxed">{m.detail}</p>
+              <p className="text-white/65 text-sm leading-relaxed">{m.detail}</p>
             </div>
           ))}
         </div>
+        </ScrollReveal>
 
         {/* IndaHash assessment */}
+        <ScrollReveal delay={0.1}>
         <div className="rounded-xl border border-green/20 bg-green/[0.03] p-8 md:p-10 mb-16">
           <h3 className="font-display text-2xl font-semibold text-white mb-4">
             IndaHash — Assessment and Fit
           </h3>
-          <p className="text-white/55 leading-relaxed mb-6">
+          <p className="text-white/75 leading-relaxed mb-6">
             IndaHash is an end-to-end influencer marketing platform with legal,
             brand safety, and compliance support. Confirmed past work on alcohol
             brands in South Africa (SOL Beer, Flying Fish) demonstrates understanding
@@ -102,7 +110,7 @@ export function InfluencerStrategy() {
           <h4 className="text-[11px] tracking-[0.15em] uppercase text-green font-medium mb-4">
             Key Capabilities
           </h4>
-          <ul className="space-y-2 text-white/50 text-sm mb-8">
+          <ul className="space-y-2 text-white/70 text-sm mb-8">
             {[
               "Creator discovery with data-driven audience age and location validation — critical for alcohol's 70/30 rule",
               "Contract and rights management",
@@ -118,7 +126,7 @@ export function InfluencerStrategy() {
           <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/40 font-medium mb-4">
             Critical Verification Requirements
           </h4>
-          <ul className="space-y-2 text-white/50 text-sm">
+          <ul className="space-y-2 text-white/70 text-sm">
             {[
               "25+ creators — hard minimum, no exceptions, evidence of DOB required",
               "Audience age composition exportable for audit (to validate 70/30 rule)",
@@ -136,7 +144,10 @@ export function InfluencerStrategy() {
           </ul>
         </div>
 
+        </ScrollReveal>
+
         {/* Contract addenda */}
+        <ScrollReveal delay={0.1}>
         <h3 className="font-display text-2xl font-semibold text-white mb-8">
           Influencer Contract Addenda
         </h3>
@@ -151,7 +162,7 @@ export function InfluencerStrategy() {
           <TabsContent value="universal">
             <div className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-8">
               <h4 className="text-white font-medium mb-4">Universal Baseline — All Markets</h4>
-              <ul className="space-y-3 text-white/50 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 {[
                   "Creator confirmed 25+; evidence of date of birth required",
                   "Audience analytics export showing majority above local LDA",
@@ -174,7 +185,7 @@ export function InfluencerStrategy() {
           <TabsContent value="nigeria-add">
             <div className="rounded-lg border border-amber-500/20 bg-amber-500/[0.03] p-8">
               <h4 className="text-white font-medium mb-4">Nigeria Addendum</h4>
-              <ul className="space-y-3 text-white/50 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
                   All deliverables treated as advertising materials subject to ARCON Standards Panel vetting
@@ -194,7 +205,7 @@ export function InfluencerStrategy() {
           <TabsContent value="kenya-add">
             <div className="rounded-lg border border-red-500/20 bg-red-500/[0.03] p-8">
               <h4 className="text-white font-medium mb-4">Kenya Addendum</h4>
-              <ul className="space-y-3 text-white/50 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
                   Alcohol-branded influencer endorsement deliverables prohibited until local legal counsel confirms permissibility
@@ -210,7 +221,7 @@ export function InfluencerStrategy() {
           <TabsContent value="egypt-add">
             <div className="rounded-lg border border-red-500/20 bg-red-500/[0.03] p-8">
               <h4 className="text-white font-medium mb-4">Egypt Addendum</h4>
-              <ul className="space-y-3 text-white/50 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
                   No alcohol promotional deliverables of any kind
@@ -226,13 +237,14 @@ export function InfluencerStrategy() {
 
         {/* East Africa note */}
         <div className="mt-8 p-4 rounded border border-white/[0.06] bg-white/[0.02]">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/65 text-sm">
             <strong className="text-white/60">East Africa note:</strong> Wowzi
             is worth evaluating for nano-creator campaigns given their regional
             footprint, but IndaHash is the recommended primary partner for South
             Africa and Nigeria.
           </p>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );

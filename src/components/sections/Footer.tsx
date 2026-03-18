@@ -13,6 +13,33 @@ export function Footer() {
   return (
     <footer className="relative py-20 px-6 bg-navy-dark/80">
       <div className="max-w-6xl mx-auto">
+        {/* CTA Section */}
+        <div className="text-center mb-16">
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Activate?
+          </h3>
+          <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
+            Get in touch with BroadBrand to start building your compliant African advertising strategy.
+          </p>
+          <a
+            href="mailto:Shakierg@broadbrand.co.za"
+            className="group inline-flex items-center gap-2 px-10 py-4 bg-green hover:bg-green-light text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(82,158,121,0.3)]"
+          >
+            Let&apos;s Get Started
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+        <Separator className="bg-white/[0.06] mb-12" />
+
         {/* References */}
         <h3 className="text-[11px] tracking-[0.2em] uppercase text-green font-medium mb-6">
           References
@@ -39,7 +66,7 @@ export function Footer() {
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                 />
               </svg>
-              <span className="text-white/40 text-xs group-hover:text-white/70 transition-colors leading-relaxed">
+              <span className="text-white/60 text-xs group-hover:text-white/70 transition-colors leading-relaxed">
                 {ref.label}
               </span>
             </a>
@@ -57,20 +84,44 @@ export function Footer() {
               className="h-3 opacity-40"
             />
             <span className="text-white/20 text-xs">|</span>
-            <span className="text-white/30 text-xs">Prepared by</span>
-            <img
-              src="/Broadbrand logo.png"
-              alt="BroadBrand"
-              className="h-4 brightness-0 invert opacity-40"
-            />
+            <span className="text-white/50 text-xs">Prepared by</span>
+            <a
+              href="https://broadbrand.co.za/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/Broadbrand logo.png"
+                alt="BroadBrand"
+                className="h-5 brightness-0 invert"
+              />
+            </a>
           </div>
-          <p className="text-white/20 text-[11px] text-center md:text-right max-w-lg leading-relaxed">
-            Platform policies and national regulations change frequently. Always
-            verify current status with platform account teams and local legal
-            counsel before activating in any market. This document is for agency
-            planning purposes only and does not constitute legal advice.
-          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://broadbrand.co.za/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 text-xs hover:text-green transition-colors"
+            >
+              broadbrand.co.za
+            </a>
+            <span className="text-white/15 text-xs">|</span>
+            <a
+              href="mailto:Shakierg@broadbrand.co.za"
+              className="text-white/40 text-xs hover:text-green transition-colors"
+            >
+              Shakierg@broadbrand.co.za
+            </a>
+          </div>
         </div>
+        <p className="text-white/30 text-[11px] text-center mt-8 max-w-2xl mx-auto leading-relaxed">
+          Platform policies and national regulations change frequently. Always
+          verify current status with platform account teams and local legal
+          counsel before activating in any market. This document is for agency
+          planning purposes only and does not constitute legal advice.
+        </p>
       </div>
     </footer>
   );

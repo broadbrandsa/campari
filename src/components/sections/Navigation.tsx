@@ -43,12 +43,18 @@ export function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        {/* Logos - Campari + BroadBrand on the left */}
+        <a href="#" className="flex items-center gap-4 group">
           <img
             src="/images/campari-logo.svg"
             alt="Campari Group"
             className="h-4 opacity-90 group-hover:opacity-100 transition-opacity"
+          />
+          <span className="text-white/20 text-xs">|</span>
+          <img
+            src="/Broadbrand logo.png"
+            alt="BroadBrand"
+            className="h-8 brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
           />
         </a>
 
@@ -69,14 +75,17 @@ export function Navigation() {
           ))}
         </div>
 
-        {/* Prepared by BroadBrand */}
-        <div className="hidden lg:flex items-center gap-2">
-          <span className="text-[11px] tracking-[0.15em] uppercase text-white/30">By</span>
-          <img
-            src="/Broadbrand logo.png"
-            alt="BroadBrand"
-            className="h-4 brightness-0 invert opacity-30"
-          />
+        {/* Let's Get Started CTA */}
+        <div className="hidden lg:flex items-center">
+          <a
+            href="mailto:Shakierg@broadbrand.co.za"
+            className="inline-flex items-center gap-2 px-5 py-2 bg-green hover:bg-green-light text-white text-xs tracking-wide uppercase font-medium rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(82,158,121,0.25)]"
+          >
+            Let&apos;s Get Started
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -111,6 +120,12 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
+            <a
+              href="mailto:Shakierg@broadbrand.co.za"
+              className="mt-2 text-center py-3 bg-green text-white text-[13px] tracking-wide uppercase rounded"
+            >
+              Let&apos;s Get Started
+            </a>
           </div>
         </div>
       )}

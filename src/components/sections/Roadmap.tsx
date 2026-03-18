@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const workstreams = [
   {
@@ -60,23 +61,26 @@ export function Roadmap() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(82,158,121,0.06),transparent)]" />
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
-            06
-          </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
-        </div>
+        <ScrollReveal>
+          {/* Section label */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
+              06
+            </span>
+            <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
+          </div>
 
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-          90-Day Activation Roadmap
-        </h2>
-        <p className="text-white/45 text-lg max-w-3xl leading-relaxed mb-16">
-          Phased implementation timeline across governance, infrastructure, paid
-          social, programmatic, and influencer workstreams.
-        </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            90-Day Activation Roadmap
+          </h2>
+          <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-16">
+            Phased implementation timeline across governance, infrastructure, paid
+            social, programmatic, and influencer workstreams.
+          </p>
+        </ScrollReveal>
 
         {/* Phase selector */}
+        <ScrollReveal delay={0.1}>
         <div className="flex gap-2 mb-12">
           {phaseLabels.map((label, i) => (
             <button
@@ -116,7 +120,7 @@ export function Roadmap() {
                       {phaseLabels[activePhase]}
                     </span>
                   </div>
-                  <p className="text-white/55 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm leading-relaxed">
                     {ws.phases[activePhase]}
                   </p>
                 </div>
@@ -124,6 +128,7 @@ export function Roadmap() {
             ))}
           </div>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );

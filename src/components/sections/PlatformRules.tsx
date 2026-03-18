@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const platformSummary = [
   {
@@ -55,23 +56,26 @@ export function PlatformRules() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_20%_50%,rgba(82,158,121,0.06),transparent)]" />
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
-            02
-          </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
-        </div>
+        <ScrollReveal>
+          {/* Section label */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
+              02
+            </span>
+            <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
+          </div>
 
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-          Platform Rules
-        </h2>
-        <p className="text-white/45 text-lg max-w-3xl leading-relaxed mb-16">
-          Platform-by-platform breakdown of what is allowed, where, and under
-          what conditions for alcohol advertising across Africa.
-        </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            Platform Rules
+          </h2>
+          <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-16">
+            Platform-by-platform breakdown of what is allowed, where, and under
+            what conditions for alcohol advertising across Africa.
+          </p>
+        </ScrollReveal>
 
         {/* Summary table */}
+        <ScrollReveal delay={0.1}>
         <div className="rounded-lg border border-white/[0.08] overflow-hidden mb-16">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -112,7 +116,7 @@ export function PlatformRules() {
                     <td className="py-4 px-4 text-center">
                       <StatusDot allowed={row.dv360} />
                     </td>
-                    <td className="py-4 px-6 text-white/45">
+                    <td className="py-4 px-6 text-white/65">
                       {row.constraint}
                     </td>
                   </tr>
@@ -121,8 +125,10 @@ export function PlatformRules() {
             </table>
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Platform detail tabs */}
+        <ScrollReveal delay={0.2}>
         <Tabs defaultValue="meta" className="w-full">
           <TabsList className="bg-white/[0.04] border border-white/[0.08] p-1 rounded-lg mb-8 w-full sm:w-auto inline-flex">
             <TabsTrigger
@@ -156,7 +162,7 @@ export function PlatformRules() {
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-green font-medium mb-4">
                 Global Minimum Requirements
               </h4>
-              <ul className="space-y-3 text-white/55 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-green mt-2 shrink-0" />
                   Comply with local law in every market targeted
@@ -173,7 +179,7 @@ export function PlatformRules() {
                 </li>
               </ul>
               <div className="mt-6 pt-6 border-t border-white/[0.06]">
-                <p className="text-white/45 text-sm">
+                <p className="text-white/65 text-sm">
                   <strong className="text-white/70">Banned markets:</strong>{" "}
                   Egypt, Libya, The Gambia. All other Sub-Saharan markets are
                   open with 18+ targeting applied.
@@ -244,7 +250,7 @@ export function PlatformRules() {
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/40 font-medium mb-4">
                 Additional Restrictions
               </h4>
-              <ul className="space-y-3 text-white/55 text-sm">
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-green mt-2 shrink-0" />
                   Prohibits advertiser-curated custom audiences and remarketing
@@ -300,13 +306,14 @@ export function PlatformRules() {
                     <span className="text-green text-sm font-medium whitespace-nowrap min-w-[160px]">
                       {item.label}
                     </span>
-                    <span className="text-white/50 text-sm">{item.detail}</span>
+                    <span className="text-white/70 text-sm">{item.detail}</span>
                   </div>
                 ))}
               </div>
             </div>
           </TabsContent>
         </Tabs>
+        </ScrollReveal>
       </div>
     </section>
   );

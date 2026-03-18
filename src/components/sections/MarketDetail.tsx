@@ -41,7 +41,7 @@ export function MarketDetail() {
         <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
           Country-by-Country Detail
         </h2>
-        <p className="text-white/45 text-lg max-w-3xl leading-relaxed mb-16">
+        <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-16">
           In-depth regulatory analysis for each priority market, with specific
           requirements, restrictions, and risk indicators.
         </p>
@@ -67,7 +67,7 @@ export function MarketDetail() {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-8 pb-8">
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-white/75 mb-6 leading-relaxed">
                 The most advertiser-friendly African market for alcohol brands.
                 Self-regulatory framework governed by the Advertising Regulatory
                 Board (ARB) and the Alcohol Industry&apos;s Digital First Code of
@@ -82,7 +82,7 @@ export function MarketDetail() {
                 ].map((r) => (
                   <div key={r.rule} className="p-4 rounded border border-white/[0.06] bg-white/[0.02]">
                     <span className="block text-green text-xs font-medium tracking-wide uppercase mb-2">{r.rule}</span>
-                    <span className="text-white/50 text-sm">{r.req}</span>
+                    <span className="text-white/70 text-sm">{r.req}</span>
                   </div>
                 ))}
               </div>
@@ -116,7 +116,7 @@ export function MarketDetail() {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-8 pb-8">
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-white/75 mb-6 leading-relaxed">
                 Open for digital alcohol advertising, but compliance is not
                 optional or lightweight. ARCON and NAFDAC both have jurisdiction.
                 All advertisements targeting Nigeria must receive Standards Panel
@@ -130,11 +130,11 @@ export function MarketDetail() {
                 ].map((item) => (
                   <div key={item.label} className="flex gap-4 p-4 rounded border border-white/[0.04] bg-white/[0.01]">
                     <span className="text-amber-400 text-sm font-medium whitespace-nowrap min-w-[160px]">{item.label}</span>
-                    <span className="text-white/50 text-sm">{item.detail}</span>
+                    <span className="text-white/70 text-sm">{item.detail}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-white/40 text-sm italic">
+              <p className="text-white/60 text-sm italic">
                 Compliance in Nigeria is primarily about process, not just
                 creative content. Build an ARCON-approved workflow into your
                 campaign production pipeline.
@@ -161,7 +161,7 @@ export function MarketDetail() {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-8 pb-8">
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-white/75 mb-6 leading-relaxed">
                 Currently permitted under the Alcoholic Drinks Control Act (Cap. 121) — the
                 Mututho Law — but the regulatory environment is tightening
                 significantly.
@@ -169,7 +169,7 @@ export function MarketDetail() {
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/40 font-medium mb-4">
                 Current Law Prohibits Advertising That:
               </h4>
-              <ul className="space-y-2 text-white/50 text-sm mb-6">
+              <ul className="space-y-2 text-white/70 text-sm mb-6">
                 {[
                   "Links alcohol to social or sexual success",
                   "Implies acceptability around driving, sports, or activities requiring concentration",
@@ -195,7 +195,7 @@ export function MarketDetail() {
                 ].map((p) => (
                   <div key={p.label} className="p-3 rounded border border-red-500/10 bg-red-500/[0.03]">
                     <span className="block text-red-400 text-xs font-medium mb-1">{p.label}</span>
-                    <span className="text-white/45 text-xs">{p.detail}</span>
+                    <span className="text-white/65 text-xs">{p.detail}</span>
                   </div>
                 ))}
               </div>
@@ -229,7 +229,7 @@ export function MarketDetail() {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-8 pb-8">
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-white/75 mb-6 leading-relaxed">
                 Law No. 63 of 1976 (Article 3) prohibits publishing or
                 advertising alcoholic beverages &quot;by any means.&quot; Both Meta and
                 Google enforce this. Ads targeting Egypt will be disapproved on
@@ -238,7 +238,7 @@ export function MarketDetail() {
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-green font-medium mb-4">
                 What Is Viable in Egypt
               </h4>
-              <ul className="space-y-2 text-white/50 text-sm">
+              <ul className="space-y-2 text-white/70 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-green mt-2 shrink-0" />
                   Trade marketing and on-premise brand presence
@@ -257,10 +257,12 @@ export function MarketDetail() {
           </AccordionItem>
         </Accordion>
 
-        {/* Secondary markets table */}
+        {/* Secondary markets with map */}
         <h3 className="font-display text-2xl font-semibold text-white mb-8">
           Secondary Markets
         </h3>
+
+        {/* Secondary markets table */}
         <div className="rounded-lg border border-white/[0.08] overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -278,11 +280,11 @@ export function MarketDetail() {
                 {secondaryMarkets.map((m) => (
                   <tr key={m.country} className="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors">
                     <td className="py-3 px-5 font-medium text-white text-sm">{m.country}</td>
-                    <td className="py-3 px-3 text-white/40 text-xs">{m.region}</td>
+                    <td className="py-3 px-3 text-white/60 text-xs">{m.region}</td>
                     <td className="py-3 px-3 text-center">{m.meta}</td>
                     <td className="py-3 px-3 text-center">{m.gam}</td>
                     <td className="py-3 px-3 text-center">{m.influencer}</td>
-                    <td className="py-3 px-5 text-white/40 text-xs max-w-xs">{m.note}</td>
+                    <td className="py-3 px-5 text-white/60 text-xs max-w-xs">{m.note}</td>
                   </tr>
                 ))}
               </tbody>

@@ -1,10 +1,15 @@
 export function Hero() {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      {/* Background gradient layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-navy to-navy" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(82,158,121,0.15),transparent)]" />
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-navy to-transparent" />
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        style={{ backgroundImage: "url('/images/la-mauny.jpg')" }}
+      />
+      {/* Lighter overlay */}
+      <div className="absolute inset-0 bg-navy/55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/40 via-transparent to-navy" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(82,158,121,0.12),transparent)]" />
 
       {/* Decorative grid lines */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -35,7 +40,7 @@ export function Hero() {
 
         {/* Subtitle */}
         <p
-          className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed mb-12 animate-fade-up"
+          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-12 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
           Where, how, and under what conditions Campari Group can run paid
@@ -43,7 +48,7 @@ export function Hero() {
           channels across Africa.
         </p>
 
-        {/* CTA + Meta */}
+        {/* CTA buttons */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
           style={{ animationDelay: "0.55s" }}
@@ -67,10 +72,32 @@ export function Hero() {
               />
             </svg>
           </a>
-          <span className="text-[11px] tracking-[0.15em] uppercase text-white/25">
-            Prepared by BroadBrand for Campari Group Africa
-          </span>
+          <a
+            href="mailto:Shakierg@broadbrand.co.za"
+            className="group inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:bg-white/[0.06]"
+          >
+            Let&apos;s Get Started
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </a>
         </div>
+        <span
+          className="block mt-4 text-[11px] tracking-[0.15em] uppercase text-white/40 animate-fade-up"
+          style={{ animationDelay: "0.65s" }}
+        >
+          Prepared by BroadBrand for Campari Group Africa
+        </span>
       </div>
 
       {/* Scroll indicator */}

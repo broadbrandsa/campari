@@ -1,4 +1,7 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const markets = [
   {
@@ -51,63 +54,66 @@ export function Readiness() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-dark/50" />
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
-            07
-          </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
-        </div>
+        <ScrollReveal>
+          {/* Section label */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-green font-medium">
+              07
+            </span>
+            <div className="h-px flex-1 bg-gradient-to-r from-green/30 to-transparent" />
+          </div>
 
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-          Market Readiness at a Glance
-        </h2>
-        <p className="text-white/45 text-lg max-w-3xl leading-relaxed mb-16">
-          Quick reference summary of activation status and recommended first
-          steps for each market.
-        </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            Market Readiness at a Glance
+          </h2>
+          <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-16">
+            Quick reference summary of activation status and recommended first
+            steps for each market.
+          </p>
+        </ScrollReveal>
 
         {/* Readiness cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {markets.map((m) => (
-            <div
-              key={m.market}
-              className="group p-6 rounded-lg border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] hover:border-green/15 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-display text-xl font-semibold text-white">
-                  {m.market}
-                </h3>
-              </div>
-
-              <div className="flex gap-6 mb-6">
-                <div>
-                  <span className="block text-[10px] tracking-[0.15em] uppercase text-white/30 mb-1">
-                    Digital
-                  </span>
-                  <span className={`text-sm font-medium ${m.digital.color}`}>
-                    {m.digital.status}
-                  </span>
+          {markets.map((m, i) => (
+            <ScrollReveal key={m.market} delay={i * 0.08}>
+              <div
+                className="group p-6 rounded-lg border border-green/10 bg-offwhite hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-500"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="font-display text-xl font-semibold text-navy">
+                    {m.market}
+                  </h3>
                 </div>
-                <div>
-                  <span className="block text-[10px] tracking-[0.15em] uppercase text-white/30 mb-1">
-                    Influencer
+
+                <div className="flex gap-6 mb-6">
+                  <div>
+                    <span className="block text-[10px] tracking-[0.15em] uppercase text-navy/50 mb-1">
+                      Digital
+                    </span>
+                    <span className={`text-sm font-medium ${m.digital.color}`}>
+                      {m.digital.status}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] tracking-[0.15em] uppercase text-navy/50 mb-1">
+                      Influencer
+                    </span>
+                    <span className={`text-sm font-medium ${m.influencer.color}`}>
+                      {m.influencer.status}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-navy/10">
+                  <span className="block text-[10px] tracking-[0.15em] uppercase text-navy/50 mb-2">
+                    First Step
                   </span>
-                  <span className={`text-sm font-medium ${m.influencer.color}`}>
-                    {m.influencer.status}
-                  </span>
+                  <p className="text-navy/70 text-sm leading-relaxed">
+                    {m.firstStep}
+                  </p>
                 </div>
               </div>
-
-              <div className="pt-4 border-t border-white/[0.06]">
-                <span className="block text-[10px] tracking-[0.15em] uppercase text-white/30 mb-2">
-                  First Step
-                </span>
-                <p className="text-white/45 text-sm leading-relaxed">
-                  {m.firstStep}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
