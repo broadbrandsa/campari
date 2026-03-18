@@ -64,7 +64,7 @@ export function Navigation() {
             <a
               key={item.href}
               href={item.href}
-              className={`px-3 py-1.5 text-[13px] tracking-wide uppercase transition-all duration-300 rounded ${
+              className={`px-3 py-1.5 text-[7px] tracking-wide uppercase transition-all duration-300 rounded ${
                 activeSection === item.href.slice(1)
                   ? "text-green bg-white/[0.06]"
                   : "text-white/50 hover:text-white/90"
