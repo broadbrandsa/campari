@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
+import { PhonePreview } from "@/components/sections/PhonePreview";
 import { Overview } from "@/components/sections/Overview";
 import { PlatformRules } from "@/components/sections/PlatformRules";
 import { MarketDetail } from "@/components/sections/MarketDetail";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <PhonePreview />
         <Overview />
         <PlatformRules />
         <MarketDetail />

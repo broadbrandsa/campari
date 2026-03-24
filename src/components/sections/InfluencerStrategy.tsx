@@ -1,5 +1,6 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -135,9 +136,7 @@ export function InfluencerStrategy() {
               "48-hour takedown compliance with termination rights for repeat breaches",
             ].map((req, i) => (
               <li key={i} className="flex items-start gap-3">
-                <svg className="w-4 h-4 text-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <Check className="w-4 h-4 text-green shrink-0 mt-0.5" />
                 {req}
               </li>
             ))}

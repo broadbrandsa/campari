@@ -67,7 +67,6 @@ export function Overview() {
                 className={`group relative rounded-lg border p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] ${speed.cardClass}`}
               >
                 <div className="flex items-start justify-between mb-6">
-                  <span className="text-3xl">{speed.icon}</span>
                   <Badge
                     variant="outline"
                     className={`text-[10px] tracking-wider uppercase ${speed.badgeClass} border-current`}

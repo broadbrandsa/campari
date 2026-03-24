@@ -1,3 +1,4 @@
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const references = [
@@ -26,15 +27,7 @@ export function Footer() {
             className="group inline-flex items-center gap-2 px-10 py-4 bg-green hover:bg-green-light text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(82,158,121,0.3)]"
           >
             Let&apos;s Get Started
-            <svg
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
 
@@ -53,19 +46,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="group flex items-start gap-2 p-3 rounded border border-white/[0.04] hover:border-green/20 hover:bg-green/[0.03] transition-all duration-300"
             >
-              <svg
-                className="w-3.5 h-3.5 text-white/20 group-hover:text-green shrink-0 mt-0.5 transition-colors"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
+              <ExternalLink className="w-3.5 h-3.5 text-white/20 group-hover:text-green shrink-0 mt-0.5 transition-colors" />
               <span className="text-white/60 text-xs group-hover:text-white/70 transition-colors leading-relaxed">
                 {ref.label}
               </span>

@@ -1,9 +1,11 @@
+import { ArrowDown, ArrowRight } from "lucide-react";
+
 export function Hero() {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed scale-105"
         style={{ backgroundImage: "url('/images/la-mauny.jpg')" }}
       />
       {/* Lighter overlay */}
@@ -58,38 +60,14 @@ export function Hero() {
             className="group inline-flex items-center gap-2 px-8 py-3.5 bg-green hover:bg-green-light text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(82,158,121,0.3)]"
           >
             Read the Full Proposal
-            <svg
-              className="w-4 h-4 transition-transform group-hover:translate-y-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
+            <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
           </a>
           <a
             href="mailto:Shakierg@broadbrand.co.za"
             className="group inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:bg-white/[0.06]"
           >
             Let&apos;s Get Started
-            <svg
-              className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
         <span

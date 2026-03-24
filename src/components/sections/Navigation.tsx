@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 
 const navItems = [
   { label: "Overview", href: "#overview" },
@@ -82,9 +83,7 @@ export function Navigation() {
             className="inline-flex items-center gap-2 px-5 py-2 bg-green hover:bg-green-light text-white text-xs tracking-wide uppercase font-medium rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(82,158,121,0.25)]"
           >
             Let&apos;s Get Started
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
