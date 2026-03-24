@@ -38,7 +38,7 @@ export function PhonePreview() {
                   src="https://preview.nws.ai/broadbrand_za/campari/"
                   className="absolute border-0"
                   style={{
-                    top: "-4%",
+                    top: "0",
                     left: "-10%",
                     width: "120%",
                     height: "125%",

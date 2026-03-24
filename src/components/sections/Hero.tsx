@@ -1,11 +1,28 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
 export function Hero() {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (bgRef.current) {
+        const scrollY = window.scrollY;
+        bgRef.current.style.transform = `scale(1.05) translateY(${scrollY * 0.4}px)`;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image with parallax */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed scale-105"
+        ref={bgRef}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 will-change-transform"
         style={{ backgroundImage: "url('/images/la-mauny.jpg')" }}
       />
       {/* Lighter overlay */}
