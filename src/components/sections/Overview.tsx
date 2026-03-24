@@ -64,7 +64,7 @@ export function Overview() {
           {speeds.map((speed, i) => (
             <ScrollReveal key={speed.status} delay={i * 0.1}>
               <div
-                className={`group relative rounded-lg border p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] ${speed.cardClass}`}
+                className={`group relative flex flex-col rounded-lg border p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] h-full ${speed.cardClass}`}
               >
                 <div className="flex items-start justify-between mb-6">
                   <Badge
@@ -77,7 +77,7 @@ export function Overview() {
                 <h3 className="font-display text-2xl font-semibold text-navy mb-2">
                   {speed.markets}
                 </h3>
-                <p className="text-navy/70 text-sm leading-relaxed">
+                <p className="text-navy/70 text-sm leading-relaxed mt-auto">
                   {speed.summary}
                 </p>
               </div>

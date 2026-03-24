@@ -76,7 +76,7 @@ export function Hero() {
             href="#overview"
             className="group inline-flex items-center gap-2 px-8 py-3.5 bg-green hover:bg-green-light text-white font-medium text-sm tracking-wide rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(82,158,121,0.3)]"
           >
-            Read the Full Proposal
+            Read Findings
             <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
           </a>
           <a

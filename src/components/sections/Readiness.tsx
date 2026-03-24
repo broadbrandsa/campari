@@ -77,7 +77,7 @@ export function Readiness() {
           {markets.map((m, i) => (
             <ScrollReveal key={m.market} delay={i * 0.08}>
               <div
-                className="group p-6 rounded-lg border border-green/10 bg-offwhite hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-500"
+                className="group flex flex-col p-6 rounded-lg border border-green/10 bg-offwhite hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-500 h-full"
               >
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="font-display text-xl font-semibold text-navy">
@@ -104,7 +104,7 @@ export function Readiness() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-navy/10">
+                <div className="pt-4 border-t border-navy/10 mt-auto">
                   <span className="block text-[10px] tracking-[0.15em] uppercase text-navy/50 mb-2">
                     First Step
                   </span>

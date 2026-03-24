@@ -3,6 +3,17 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function PhonePreview() {
+  // Phone screen dimensions
+  const phoneWidth = 320;
+  const phoneHeight = 660;
+  const bezelWidth = 10;
+  const borderRadius = 48;
+
+  // Render iframe at mobile viewport, then scale to fit
+  const iframeMobileWidth = 375;
+  const iframeMobileHeight = 900;
+  const scale = phoneWidth / iframeMobileWidth;
+
   return (
     <section className="relative py-24 px-6 overflow-hidden">
       {/* Background accents */}
@@ -26,31 +37,76 @@ export function PhonePreview() {
 
         <ScrollReveal delay={0.15}>
           <div className="flex justify-center">
-            {/* iPhone frame */}
-            <div className="relative">
-              {/* Outer shell */}
+            {/* iPhone — silver/titanium bezel */}
+            <div
+              style={{
+                width: phoneWidth + bezelWidth * 2,
+                height: phoneHeight + bezelWidth * 2,
+                borderRadius,
+                padding: bezelWidth,
+                background: "linear-gradient(165deg, #e8e8ed 0%, #b0b0b8 20%, #d4d4da 40%, #a0a0a8 60%, #c8c8d0 80%, #b8b8c0 100%)",
+                boxShadow:
+                  "0 25px 60px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(255,255,255,0.3), inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(0,0,0,0.1)",
+                position: "relative",
+              }}
+            >
+              {/* Screen area */}
               <div
-                className="relative rounded-[54px] bg-gradient-to-b from-[#2a2a2e] to-[#1a1a1e] shadow-[0_0_80px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden"
-                style={{ width: 523, height: 1013 }}
+                className="relative w-full h-full overflow-hidden"
+                style={{
+                  borderRadius: borderRadius - bezelWidth,
+                  background: "#000",
+                }}
               >
-                {/* Iframe - oversized to fully cover phone and hide site controls */}
+                {/* Iframe: mobile width scaled to phone */}
                 <iframe
                   src="https://preview.nws.ai/broadbrand_za/campari/"
-                  className="absolute border-0"
-                  style={{
-                    top: "0",
-                    left: "-10%",
-                    width: "120%",
-                    height: "125%",
-                  }}
                   title="Campari Africa Preview"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                  className="block border-0"
+                  style={{
+                    width: iframeMobileWidth,
+                    height: iframeMobileHeight,
+                    transform: `scale(${scale})`,
+                    transformOrigin: "top left",
+                  }}
                 />
               </div>
 
-              {/* Reflection glow */}
-              <div className="absolute -inset-10 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(82,158,121,0.08),transparent_70%)]" />
+              {/* Dynamic Island */}
+              <div
+                className="absolute left-1/2 -translate-x-1/2 rounded-full"
+                style={{
+                  top: bezelWidth + 10,
+                  width: 90,
+                  height: 26,
+                  zIndex: 10,
+                  background: "#000",
+                }}
+              />
+
+              {/* Home indicator */}
+              <div
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full"
+                style={{ width: 110, height: 4, zIndex: 10, background: "rgba(255,255,255,0.25)" }}
+              />
+
+              {/* Ambient glow */}
+              <div className="absolute -inset-20 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(82,158,121,0.15),transparent_60%)]" />
             </div>
+
+            {/* Link below phone */}
+            <a
+              href="https://preview.nws.ai/broadbrand_za/campari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-green hover:text-green-light text-sm font-medium tracking-wide transition-colors duration-200"
+            >
+              Example brand story
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+              </svg>
+            </a>
           </div>
         </ScrollReveal>
       </div>
