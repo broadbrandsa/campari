@@ -29,9 +29,20 @@ export function PhonePreview() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
               Example Brand Story
             </h2>
-            <p className="text-white/60 text-lg max-w-xl mx-auto">
+            <p className="text-white/60 text-lg max-w-xl mx-auto mb-6">
               A visual-first approach that cuts through the noise of a highly fragmented attention economy.
             </p>
+            <a
+              href="https://preview.nws.ai/broadbrand_za/campari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-green hover:text-green-light text-sm font-medium tracking-wide transition-colors duration-200"
+            >
+              Example brand story
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+              </svg>
+            </a>
           </div>
         </ScrollReveal>
 
@@ -95,18 +106,6 @@ export function PhonePreview() {
               <div className="absolute -inset-20 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(82,158,121,0.15),transparent_60%)]" />
             </div>
 
-            {/* Link below phone */}
-            <a
-              href="https://preview.nws.ai/broadbrand_za/campari/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-green hover:text-green-light text-sm font-medium tracking-wide transition-colors duration-200"
-            >
-              Example brand story
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
-              </svg>
-            </a>
           </div>
         </ScrollReveal>
       </div>
